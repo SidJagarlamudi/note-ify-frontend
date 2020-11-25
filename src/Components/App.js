@@ -22,8 +22,8 @@ class App extends React.Component {
         <NavBar />
 
         <Switch>
-        <Route exact path={"/signup"} component={SignUp} />
         <Route exact path={"/"} component={Login} />
+        <Route exact path={"/signup"} component={SignUp} />
           <Route exact path={"/notes/new"} component={NewNote} />
           <Route exact path={"/notes/:id/edit"} component={EditNote} />
           <Route exact path={"/notes/:id"} component={ViewNote} />
