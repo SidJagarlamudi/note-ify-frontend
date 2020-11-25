@@ -21,7 +21,7 @@ class EditNote extends React.Component {
   componentDidMount() {
     const url = this.props.match.params.id;
     const id = this.props.auth;
-    fetch(`http://localhost:3000/users/${id}/notes/${url}`)
+    fetch(`https://note-ify1.herokuapp.com/users/${id}/notes/${url}`)
       .then((resp) => resp.json())
       .then((data) =>
         this.setState({
