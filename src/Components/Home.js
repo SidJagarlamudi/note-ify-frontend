@@ -13,7 +13,7 @@ class App extends React.Component {
       <div style={{ backgroundColor: 'white' , height: 10000}}>
        
         <NotesContainer />
-      
+        <Map />
       </div>
     );
   }

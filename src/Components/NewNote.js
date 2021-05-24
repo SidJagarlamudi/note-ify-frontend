@@ -51,7 +51,7 @@ class NewNote extends React.Component {
       body: JSON.stringify(this.state),
     };
 
-    fetch(`https://note-ify1.herokuapp.com/users/${this.props.auth}/notes`, reqObj)
+    fetch(`http://localhost:3000/users/${this.props.auth}/notes`, reqObj)
       .then((resp) => resp.json())
       .then(() => this.props.history.push("/home"));
   };

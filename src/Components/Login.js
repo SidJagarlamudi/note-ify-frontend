@@ -40,7 +40,7 @@ class Login extends React.Component {
       body: JSON.stringify(this.state),
     };
 
-    fetch("https://note-ify1.herokuapp.com/api/v1/auth", reqObj)
+    fetch("http://localhost:3000/api/v1/auth", reqObj)
       .then((resp) => resp.json())
       .then((data) => {
         if (data.error) {

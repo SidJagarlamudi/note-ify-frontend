@@ -21,7 +21,7 @@ class EditNote extends React.Component {
   componentDidMount() {
     const url = this.props.match.params.id;
     const id = this.props.auth;
-    fetch(`https://note-ify1.herokuapp.com/users/${id}/notes/${url}`)
+    fetch(`http://localhost:3000/users/${id}/notes/${url}`)
       .then((resp) => resp.json())
       .then((data) =>
         this.setState({
@@ -63,7 +63,7 @@ class EditNote extends React.Component {
       body: JSON.stringify(this.state),
     };
 
-    fetch(`https://note-ify1.herokuapp.com/users/${id}/notes/${url}`, reqObj)
+    fetch(`http://localhost:3000/users/${id}/notes/${url}`, reqObj)
       .then((resp) => resp.json())
       .then(() => this.props.history.push("/home"));
   };

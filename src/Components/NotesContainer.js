@@ -26,7 +26,7 @@ class NotesContainer extends React.Component {
       this.props.history.push("/login");
     } else {
       const id = this.props.auth.id;
-      fetch(`https://note-ify1.herokuapp.com/users/${id}/notes`)
+      fetch(`http://localhost:3000/users/${id}/notes`)
         .then((resp) => resp.json())
         .then((notesJSON) => {
           this.props.fetchNotesSuccess(notesJSON);
@@ -71,7 +71,7 @@ class NotesContainer extends React.Component {
           style={{ padding: 10, margin: 100, position: "absolute" }}
           container
           direction="row"
-          justify="center"
+          justify="left"
           alignItems="center"
         >
 

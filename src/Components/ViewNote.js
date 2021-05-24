@@ -10,7 +10,7 @@ class ViewNote extends React.Component {
 
   componentDidMount() {
     const url = this.props.match.params.id;
-    fetch(`https://note-ify1.herokuapp.com/notes/${url}`)
+    fetch(`http://localhost:3000/notes/${url}`)
       .then((resp) => resp.json())
       .then((data) =>
         this.setState({

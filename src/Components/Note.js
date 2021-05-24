@@ -56,7 +56,7 @@ function Note(props) {
   const handleDelete = () => {
     const id = props.notes.id;
     const url = props.notes.id
-    fetch(`https://note-ify1.herokuapp.com/users/${id}/notes/${url}`, { method: "DELETE" })
+    fetch(`http://localhost:3000/users/${id}/notes/${url}`, { method: "DELETE" })
       .then((resp) => resp.json())
       .then(() => {
         props.deleteNote(id);
@@ -97,7 +97,7 @@ function Note(props) {
       body: JSON.stringify(datas),
     };
 
-    fetch(`https://note-ify1.herokuapp.com/users/${id}/notes/${url}`, reqObj)
+    fetch(`http://localhost:3000/users/${id}/notes/${url}`, reqObj)
       .then((resp) => resp.json())
       .then(() => console.log("------"));
   };
